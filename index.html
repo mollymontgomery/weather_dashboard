@@ -5,7 +5,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <title>Weather Dashboard</title>
         
         <link rel="stylesheet" href="./assets/css/style.css">
@@ -25,17 +25,80 @@
                <div class="card" style="width: 22rem;"> <!--https://mdbootstrap.com/docs/react/components/panels/-->
                     <div class="card-body">
                         <h4>Search for a City:</h4>
-                        <form class="form-inline">
-                            <div class="form-group"></div>
+                        <form class="form-inline"> <!--https://www.w3schools.com/bootstrap/bootstrap_forms.asp-->
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="city-type">
+                            </div>
+                            <button id="search-button" type="submit" class="btn btn-primary"></button>
                         </form>
                     </div>
             </div>
+            <ul id="city-list" class="list-cities"></ul>
            </div>
        </div>
-    
+    <div class="col-md-9">
+        <div id="current-weather" class="card">
+            <div class="card-body">
+                <div id="city-date-image">
+                    <span id='city-name'></span><span id='current-image'></span>
+                </div><ul>
+                <p class="card-info" id="current-temp"></p>
+                <p class="card-info" id="current-humidity"></p>
+                <p class="card-info" id="current-wind"></p>
+                <p class="card-info" id="current-uv"></p>
+                </ul></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="weather-forecast" class="col-md-9">
+            <h3>5-Day Forecast:</h3>
+            <div id="forecast-cards">
+                <div class=day1 class="card-body">
+                    <span class="card-name" id='day1-forecast'></span>
+                    <span id="day1-icon"></span>
+                    <p class="card-info" id="day1-temp"></p>
+                    <p class="card-info" id="day1-humidity"></p>
+                </div>
+            </div>
+            <div id="forecast-cards">
+                <div class=day2 class="card-body">
+                    <span class="card-name" id='day2-forecast'></span>
+                    <span id="day2-icon"></span>
+                    <p class="card-info" id="day2-temp"></p>
+                    <p class="card-info" id="day2-humidity"></p>
+                </div>
+            </div>
+            <div id="forecast-cards">
+                <div class=day3 class="card-body">
+                    <span class="card-name" id='day3-forecast'></span>
+                    <span id="day3-icon"></span>
+                    <p class="card-info" id="day3-temp"></p>
+                    <p class="card-info" id="day3-humidity"></p>
+                </div>
+            </div>
+            <div id="forecast-cards">
+                <div class=day4 class="card-body">
+                    <span class="card-name" id='day4-forecast'></span>
+                    <span id="day4-icon"></span>
+                    <p class="card-info" id="day4-temp"></p>
+                    <p class="card-info" id="day4-humidity"></p>
+                </div>
+            </div>
+            <div id="forecast-cards">
+                <div class=day5 class="card-body">
+                    <span class="card-name" id='day5-forecast'></span>
+                    <span id="day5-icon"></span>
+                    <p class="card-info" id="day5-temp"></p>
+                    <p class="card-info" id="day5-humidity"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
    
  
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script src="assets/js/script.js"></script>
 </body>
