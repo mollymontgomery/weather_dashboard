@@ -1,9 +1,13 @@
-
 // My weather API key
 var apiKey= "8f34a961cac45cf68d8dad2a485aae8b"
+var searchQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+ apiKey; 
 
-var searchCityFormEl = document.querySelector("#form-inline")
+fetch(searchQueryURL).then(function(response){
+    if (response.ok){
+        return response.json()
+    }
+})
+.then(function(data){
+    console.log("city, data")
+})
 
-var searchCity = function(city) {
-    var apiUrl = api.openweathermap.org/data/2.5/weather?q= {searchCity} &appid= + apiKey + "&units=imperial";
-}
